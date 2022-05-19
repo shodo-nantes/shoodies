@@ -1,0 +1,32 @@
+:root {
+    --primary: #000;
+    --second: #cecece;
+    --font: #FFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#header {
+    padding: 0.625rem;
+    display: flex;
+    width: 100%;
+    background-color: var(--font);
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--second);
+}
+
+#header .logo-shodo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+#logo {
+    display: block;
+    width: 75px;
+    height: auto;
+}
