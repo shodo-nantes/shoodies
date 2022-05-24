@@ -1,8 +1,43 @@
 from GoodiesDocumentation import *
+from pydantic import BaseModel
+
+
+class Product(BaseModel):
+    id: int
+    name: str
+    type: str
+    photo_URL: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "id": "1",
+                "name": "casquette toto",
+                "type": "vêtement",
+                "photo_URL": "front-end/images/casquette.jpeg",
+            }
+        }
+
+
+product_list = [Product(id=1, name='Casquette toto', type='vêtement', photo_URL="casquette.jpeg"),
+                Product(id=2, name='Casquette', type='vêtement', photo_URL="casquette.jpeg"),
+                Product(id=3, name='Gourde', type='bouteille', photo_URL="gourde.jpeg"),
+                Product(id=4, name='Sac à dos', type='vêtement', photo_URL="sac-a-dos.jpeg"),
+                Product(id=5, name='t-shirt 1', type='vêtement', photo_URL="t-shirt.png"),
+                Product(id=6, name='t-shirt 2', type='vêtement', photo_URL="t-shirt.png"),
+                Product(id=7, name='t-shirt 3', type='vêtement', photo_URL="t-shirt.png"),
+                Product(id=8, name='t-shirt 4', type='vêtement', photo_URL="t-shirt.png"),
+                Product(id=9, name='Sweatshirt', type='vêtement', photo_URL="sweatshirt.jpeg"),
+                Product(id=10, name='Sweatshirt', type='vêtement', photo_URL="sweatshirt.jpeg"),
+                Product(id=11, name='Mug', type='vêtement', photo_URL="mug.jpeg")]
 
 
 @app.get("/product", tags=["Produit"])
-async def product_data():
-    data = ['casquette', 'casquette', 'gourde', 'sac à dos', 't-shirt', 't-shirt', 't-shirt', 't-shirt', 'sweatshirt',
-            'sweatshirt', 'mug']
-    return data
+def get_data_product():
+    list_of_name_product = []
+    list_of_photo_url = []
+    for i in range(len(product_list)):
+        list_of_name_product.append(product_list[i].name)
+        list_of_photo_url.append(product_list[i].photo_URL)
+        i += 1
+    return list_of_name_product, list_of_photo_url
