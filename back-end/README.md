@@ -1,6 +1,6 @@
 # Données sur les SHOODIES
 
-développé en python 3.9
+développé en python 3.9 et déployé sur heroku
 
 ### Installation
 
@@ -12,8 +12,8 @@ développé en python 3.9
 
 ### Informations sur l'API
 
-* [API sur les goodies](#)
-* [Documentation de l'API](#)
+* [API sur les goodies](https://goodies-data.herokuapp.com/product)
+* [Documentation de l'API](https://goodies-data.herokuapp.com/documentation)
 
 ### Liens utiles
 
