@@ -1,7 +1,15 @@
 :root {
     --primary: #000;
-    --second: #cecece;
+    --second: #CECECE;
     --font: #FFF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #FFF;
+        --secondary: #CECECE;
+        --font: #272728;
+    }
 }
 
 * {
@@ -9,9 +17,15 @@
 }
 
 p {
+    padding: 0.75rem 0;
     color: inherit;
     font-family: Bluu Next, sans-serif;
     font-size: 0.85rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--font);
 }
 
 .container {
@@ -44,6 +58,36 @@ p {
     height: auto;
 }
 
+.navbar {
+    display: block;
+    flex-grow: 1;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
 .product-list {
     padding: 1rem 0;
     display: flex;
@@ -66,6 +110,7 @@ p {
     width: 100%;
     border-radius: 1rem;
     box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.5);
+    background-color: #FFFFFF;
     text-align: center;
     opacity: 1;
 }
@@ -106,4 +151,8 @@ p {
     align-content: center;
     align-items: center;
     border-top: 1px solid var(--second);
+}
+
+.copyright p {
+    color: var(--primary);
 }
