@@ -1,6 +1,6 @@
 # Données sur les SHOODIES
 
-développé en python 3.9
+développé en python 3.9 et déployé sur heroku
 
 ### Installation
 
