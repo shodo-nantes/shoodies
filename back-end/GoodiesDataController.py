@@ -1,4 +1,4 @@
-from ./back_end import GoodiesDocumentation
+from GoodiesDocumentation import *
 from pydantic import BaseModel
 
 
@@ -19,6 +19,7 @@ product_list = [Product(id=1, name='Casquette toto', type='vêtement', photo_URL
                 Product(id=9, name='Sweatshirt', type='vêtement', photo_URL="sweatshirt.jpeg"),
                 Product(id=10, name='Sweatshirt', type='vêtement', photo_URL="sweatshirt.jpeg"),
                 Product(id=11, name='Mug', type='objet', photo_URL="mug.jpeg")]
+
 
 @app.get("/product", tags=["Produit"])
 def get_data_product():
