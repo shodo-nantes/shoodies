@@ -7,7 +7,7 @@
     <meta name="description" content="Site pour commander des goodies shodo">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo-shodo-nantes.jpeg">
-    <title>SHOODIES</title>
+    <title><?= $title ?></title>
 </head>
 
 <body>
@@ -21,6 +21,18 @@
              src="images/logo-shodo-nantes.jpeg"
              alt="SHOODIES">
     </div>
+
+    <nav class="navbar">
+
+        <ul>
+            <li>
+                <a href="#">
+                    <span>DÉCONNEXION</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
 
 </header>
 
