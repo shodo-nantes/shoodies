@@ -1,9 +1,8 @@
 <?php
-$title = "Accueil";
-include "header.php";
+$title = "SHOODIES";
+include_once "headerConnecte.php";
 
-$url = 'http://127.0.0.1:8000/product';
-$request_url = $url;
+$request_url = 'https://goodies-data.herokuapp.com/product';
 
 $curl = curl_init($request_url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -15,7 +14,7 @@ $response = json_decode($response);
 ?>
 
 
-    <div class="product-list">
+    <div id="product-list">
 
         <section class="product-data">
             <div class="container">
@@ -120,5 +119,4 @@ $response = json_decode($response);
 
 
 <?php
-include "footer.php";
-?>
+include_once "footer.php";

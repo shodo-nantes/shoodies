@@ -26,9 +26,7 @@
 
         <ul>
             <li>
-                <a href="#">
-                    <span>DÉCONNEXION</span>
-                </a>
+                <a href="#"> DÉCONNEXION</a>
             </li>
         </ul>
 
