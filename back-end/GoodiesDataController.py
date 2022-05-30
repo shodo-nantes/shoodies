@@ -24,13 +24,4 @@ product_list = [Product(id=1, name='Casquette toto', type='vêtement', photo_URL
 
 @app.get("/product", tags=['Produit'])
 def get_data_product():
-    list_of_name_product = []
-    list_of_type_product = []
-    list_of_photo_url_product = []
-
-    for i in range(len(product_list)):
-        list_of_name_product.append(product_list[i].name)
-        list_of_type_product.append(product_list[i].type)
-        list_of_photo_url_product.append(product_list[i].photo_URL)
-        i += 1
-    return list_of_name_product, list_of_photo_url_product
+    return product_list
