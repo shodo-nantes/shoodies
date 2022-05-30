@@ -1,12 +1,10 @@
 <?php
 $title = "Connexion";
-include_once "header.php";
+include_once "./src/layout/header.php";
 ?>
 
     <section id="homepage">
-
         <div class="container">
-
             <h1>SHOODIES</h1>
 
             <form action="?" method="POST" enctype="multipart/form-data">
@@ -38,10 +36,8 @@ include_once "header.php";
                 </div>
 
             </form>
-
         </div>
-
     </section>
 
 <?php
-include_once "footer.php";
+include_once "./src/layout/footer.php";

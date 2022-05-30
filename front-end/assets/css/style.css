@@ -8,8 +8,8 @@
     box-sizing: border-box;
 }
 
-p {
-    padding: 0.75rem 0;
+h1, p, span {
+    padding: 1rem 0;
     color: inherit;
     font-family: Bluu Next, sans-serif;
     font-size: 1rem;
@@ -76,7 +76,6 @@ body {
     align-items: center;
     text-decoration: none;
     color: inherit;
-    font-size: 1rem;
 }
 
 #product-list {
@@ -110,7 +109,6 @@ body {
 
 .product-card span {
     opacity: 0;
-    font-family: Bluu Next, sans-serif;
 }
 
 .product-card img {
@@ -125,7 +123,6 @@ body {
 }
 
 .product-card:hover span {
-    font-size: 1rem;
     opacity: 1;
 }
 
@@ -134,9 +131,8 @@ body {
 }
 
 #homepage h1 {
-    padding: 1.5rem;
     text-align: center;
-    color: var(--primary);
+    font-size: 1.5rem;
 }
 
 #homepage form {
