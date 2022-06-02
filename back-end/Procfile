@@ -1,1 +1,1 @@
-web: cd back-end && uvicorn GoodiesDataController:app --host=0.0.0.0 --port=${PORT}
+cd back-end && uvicorn GoodiesDataController:app --host=0.0.0.0 --port=${PORT:-0000}
