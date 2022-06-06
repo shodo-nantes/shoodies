@@ -8,7 +8,7 @@ développé en python 3.9 et déployé sur heroku
 * installation des modules fastapi et uvicorn avec les commandes suivantes (pip ou pip3, ça dépend de votre version):
     * `pip install fastapi` ou `pip3 install fastapi`
     * `pip install "uvicorn[standard]"` ou `pip3 install "uvicorn[standard]"`
-* lancer l'app avec la commande `uvicorn GoodiesDataController:app --reload`
+* lancer l'app en local avec la commande `uvicorn GoodiesDataController:app --reload`
 
 ### Informations sur l'API
 
