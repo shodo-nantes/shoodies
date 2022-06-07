@@ -1,5 +1,5 @@
 <?php
-require_once '/Applications/MAMP/htdocs/shoodies/vendor/autoload.php';
+require_once __DIR__ . './../../../vendor/autoload.php';
 
 $client = new Google_Client();
 $client->setClientId('928331427422-hsl0dm403e7diq0g54pu7if8a7emf7nl.apps.googleusercontent.com');

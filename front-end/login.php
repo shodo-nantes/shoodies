@@ -2,8 +2,6 @@
 $title = 'LOGIN SHOODIES';
 include_once "./src/layout/header.php";
 require_once './src/actions/config.php';
-
-
 ?>
 
 <section class="homepage-logo">
