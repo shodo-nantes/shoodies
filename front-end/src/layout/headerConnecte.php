@@ -26,7 +26,10 @@
 
         <ul>
             <li>
-                <a href="#"><span>DÉCONNEXION</span></a>
+                <form action="./src/actions/logout.php" method="post">
+                    <input type="hidden">
+                    <button type="submit" class="btn btn-primary"><span>Se déconnecter</span></button>
+                </form>
             </li>
         </ul>
 
