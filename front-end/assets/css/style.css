@@ -28,8 +28,6 @@ body {
     padding-right: 1rem;
 }
 
-/* --------------------------- PAGE LOGIN --------------------------- */
-
 #homepage {
     padding: 12rem 1rem;
     width: 100%;
@@ -92,8 +90,6 @@ body {
 .login-content a:hover {
     background-color: #1A1A1A;
 }
-
-/* --------------------------- PAGE INDEX --------------------------- */
 
 #header {
     padding: 1rem;
