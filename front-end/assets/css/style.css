@@ -17,11 +17,11 @@ h1, p, span {
 
 body {
     margin: 0;
-    background: linear-gradient(to right, #050505, #2f2f2f, #3f3f3f);
+    background-color: var(--font);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
@@ -30,28 +30,9 @@ body {
 
 /* --------------------------- PAGE LOGIN --------------------------- */
 
-.homepage-logo {
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.logo-shodo-login {
-    padding: 2rem 0 0 0;
-    text-align: center;
-    margin: 3rem;
-}
-
-#logo-login {
-    display: flex;
-    width: 100px;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-right: auto;
-    margin-left: auto;
+#homepage {
+    padding: 12rem 1rem;
+    width: 100%;
 }
 
 .wrapper {
@@ -64,48 +45,52 @@ body {
     justify-content: space-between;
 }
 
-#homepage-login {
+.sign-in {
     padding: 2rem;
     width: 100%;
-    height: 100%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.4);
+    background-color: var(--secondary);
 }
 
-#homepage-login h1 {
+.login-logo img {
+    display: block;
+    width: 10rem;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-content {
+    padding: 1rem;
+    display: block;
+    height: fit-content;
+}
+
+.login-content h1 {
     text-align: center;
     font-size: 1.75rem;
 }
 
-.sign-in {
-    padding: 2rem;
-    max-width: 500px;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 1rem;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-    background-color: var(--font);
-}
-
-.sign-in img {
-    padding: 2rem 0;
+.login-content a {
+    padding: 1.25rem;
+    margin: 0 auto;
+    width: 12rem;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 22rem;
-    height: 150px;
-    width: auto;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
-@media screen and (max-width: 1200px) {
-
-    .sign-in img {
-        padding: 2rem 0;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 15rem;
-        height: auto;
-    }
+.login-content a:hover {
+    background-color: #1A1A1A;
 }
 
 /* --------------------------- PAGE INDEX --------------------------- */
