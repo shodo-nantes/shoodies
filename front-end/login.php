@@ -4,7 +4,7 @@ include_once "./src/layout/header.php";
 require_once './src/actions/config.php';
 ?>
 
-<div class="wrapper">
+<div class="homepage-wrapper">
     <section id="homepage">
         <div class="container">
             <div class="sign-in">
