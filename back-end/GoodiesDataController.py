@@ -19,11 +19,6 @@ product_list = [Product(id=1, name='Casquette noir', type='vêtement', photo_URL
                 Product(id=11, name='Mug', type='objet', photo_URL='mug.jpg')]
 
 
-@app.on_event("startup")
-async def startup():
-    print("Connecting...")
-
-
 @app.get("/product", tags=['Produit'])
 def get_data_product():
     return product_list
