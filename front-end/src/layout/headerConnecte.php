@@ -15,18 +15,21 @@
 <header id="header">
 
     <div class="logo-shodo">
-        <img id="logo"
+        <a href="./index.php"><img id="logo"
              width="305"
              height="305"
              src="./assets/images/logo-shodo-nantes.jpeg"
-             alt="SHOODIES">
+             alt="SHOODIES"></a>
     </div>
 
     <nav class="navbar">
 
         <ul>
             <li>
-                <a href="#"><span>DÉCONNEXION</span></a>
+                <form action="./src/actions/logout.php" method="post">
+                    <input type="hidden">
+                    <button type="submit" class="btn btn-primary"><span>Se déconnecter</span></button>
+                </form>
             </li>
         </ul>
 

@@ -12,16 +12,4 @@
 
 <body>
 
-<header id="header">
-
-    <div class="logo-shodo">
-        <img id="logo"
-             width="305"
-             height="305"
-             src="./assets/images/logo-shodo-nantes.jpeg"
-             alt="SHOODIES">
-    </div>
-
-</header>
-
 <main>

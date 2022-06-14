@@ -1,1 +1,9 @@
-{}
+{
+  "require": {
+    "google/apiclient": "^2.12",
+    "ext-json": "*"
+  },
+  "config": {
+    "platform-check": false
+  }
+}
