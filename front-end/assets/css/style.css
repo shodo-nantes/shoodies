@@ -4,6 +4,13 @@
     --font: #F2F2F2;
 }
 
+@font-face {
+    font-family: 'Bluu Next';
+    src: url('../fonts/BluuNext-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
 }
