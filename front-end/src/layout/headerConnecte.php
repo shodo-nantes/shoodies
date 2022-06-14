@@ -15,11 +15,11 @@
 <header id="header">
 
     <div class="logo-shodo">
-        <img id="logo"
+        <a href="./index.php"><img id="logo"
              width="305"
              height="305"
              src="./assets/images/logo-shodo-nantes.jpeg"
-             alt="SHOODIES">
+             alt="SHOODIES"></a>
     </div>
 
     <nav class="navbar">

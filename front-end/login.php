@@ -1,5 +1,5 @@
 <?php
-$title = 'LOGIN SHOODIES';
+$title = 'LOGIN';
 include_once "./src/layout/header.php";
 require_once './src/actions/config.php';
 ?>
