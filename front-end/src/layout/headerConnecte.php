@@ -15,11 +15,8 @@
 <header id="header">
 
     <div class="logo-shodo">
-        <a href="./index.php"><img id="logo"
-             width="305"
-             height="305"
-             src="./assets/images/logo-shodo-nantes.jpeg"
-             alt="SHOODIES"></a>
+        <a href="./index.php"><img id="logo" width="305" height="305" src="./assets/images/logo-shodo-nantes.jpeg"
+                                   alt="SHOODIES"></a>
     </div>
 
     <nav class="navbar">
@@ -38,3 +35,18 @@
 </header>
 
 <main>
+
+<?php
+if ($_SESSION['access_token'] == '') {
+    header("Location: login.php");
+}
+
+if (isset($_GET["code"])) {
+    $token = $client->fetchAccessTokenWithAuthCode($_GET["code"]);
+    if (!isset($token['error'])) {
+        $client->setAccessToken($token['access_token']);
+        $_SESSION['access_token'] = $token['access_token'];
+        $google_service = new Google_Service_Oauth2($client);
+        $data = $google_service->userinfo->get();
+    }
+}

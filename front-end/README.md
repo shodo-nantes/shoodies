@@ -1,6 +1,6 @@
 # Site sur les SHOODIES
 
-Développé en php 8.0 et déployé sur heroku
+Développé en php 7.4 et déployé sur heroku
 
 ### Lien vers le site
 
