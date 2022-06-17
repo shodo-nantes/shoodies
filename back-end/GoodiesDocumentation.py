@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 
 description = """
-Stockage des données sur les goodies
+API REST qui appelle une base de données.
 
 ## Lien utile
 """

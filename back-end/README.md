@@ -1,6 +1,6 @@
 # Données sur les SHOODIES
 
-développé en python 3.9 et déployé sur heroku
+développé en python 3.9 et déployé sur heroku. L'API REST appelle une base de données.
 
 ### Installation
 
