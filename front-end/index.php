@@ -18,7 +18,7 @@ if (isset($_GET["code"])) {
     }
 }
 
-$get_data = callAPI('GET', 'http://127.0.0.1:8000/product', false);
+$get_data = callAPI('GET', 'https://goodies-data.herokuapp.com/product', false);
 $response = json_decode($get_data, true);
 ?>
 
