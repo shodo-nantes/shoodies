@@ -23,6 +23,18 @@ npm ci
 
 _Note: you don't have to install dependencies for each package, the root package.json will install all dependencies for you_
 
+## Usage
+
+### Development
+
+**Frontend:**
+
+To start the frontend in development mode, run the following command:
+
+```bash
+npm run dev -w frontend
+```
+
 ## Tools
 
 ### Linting
