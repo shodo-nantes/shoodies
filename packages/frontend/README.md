@@ -1,6 +1,6 @@
-# Quizzy quizz frontend
+# Shoodies frontend
 
-Frontend for quizzy quizz app
+Frontend for shoodies app
 
 ## Installation
 
