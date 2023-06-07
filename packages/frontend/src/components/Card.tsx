@@ -21,7 +21,7 @@ export default function CardComponent() {
                     component="div"
                     sx={{
                         textAlign: 'center',
-                        fontSize: 20,
+                        fontSize: 25,
                     }}
                 >
                     Nom du produit
