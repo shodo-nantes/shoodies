@@ -2,7 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-function AppBarComponent() {
+export default function AppBarComponent() {
     return (
         <AppBar component="header" role="banner" position="static">
             <Toolbar>
@@ -18,5 +18,3 @@ function AppBarComponent() {
         </AppBar>
     );
 }
-
-export { AppBarComponent };
