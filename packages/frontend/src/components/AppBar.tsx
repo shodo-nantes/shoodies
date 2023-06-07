@@ -4,22 +4,18 @@ import Typography from '@mui/material/Typography';
 
 function AppBarComponent() {
     return (
-        <header>
-            <nav>
-                <AppBar position="static">
-                    <Toolbar>
-                        <Typography
-                            variant="h6"
-                            component="a"
-                            href="/"
-                            sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}
-                        >
-                            Shoodies
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-            </nav>
-        </header>
+        <AppBar component="header" role="banner" position="static">
+            <Toolbar>
+                <Typography
+                    variant="h6"
+                    component="a"
+                    href="/"
+                    sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}
+                >
+                    Shoodies
+                </Typography>
+            </Toolbar>
+        </AppBar>
     );
 }
 
