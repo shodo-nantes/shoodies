@@ -3,7 +3,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-export default function CardGoody(props: any) {
+import { Goody } from 'types/goody';
+
+export default function CardGoody(props: Goody) {
     const { image } = props;
     const { name } = props;
     return (
