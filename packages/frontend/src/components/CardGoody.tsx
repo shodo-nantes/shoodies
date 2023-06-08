@@ -3,10 +3,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-import { Goody } from 'types/goody';
-const goody: Goody = { name: 'fichu titre qui marche pas', image: '' };
-
-export default function CardGoody() {
+export default function CardGoody(props: any) {
+    const { image } = props;
+    const { name } = props;
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -15,8 +14,7 @@ export default function CardGoody() {
                     maxWidth: 345,
                 }}
                 component={'img'}
-                image="https://images.unsplash.com/photo-1685900337313-64cd27f0238e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
-                title="a hand holding a pink poppy"
+                image={image}
             />
             <CardContent>
                 <Typography
@@ -27,7 +25,7 @@ export default function CardGoody() {
                         textAlign: 'center',
                     }}
                 >
-                    {goody.name}
+                    {name}
                 </Typography>
             </CardContent>
         </Card>
