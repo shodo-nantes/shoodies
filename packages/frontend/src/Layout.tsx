@@ -8,7 +8,7 @@ export default function Layout() {
     const [hello, setHello] = useState('toto');
     useEffect(() => {
         const message = async () => {
-            const rawResponse = await fetch('http://localhost:3000/');
+            const rawResponse = await fetch(import.meta.env.VITE_API_URL);
             const jsonResponse = await rawResponse.json();
             setHello(jsonResponse.message);
         };
