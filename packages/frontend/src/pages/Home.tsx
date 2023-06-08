@@ -1,4 +1,3 @@
-import { Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 import CardGoody from 'components/CardGoody';
@@ -30,11 +29,10 @@ export default function Home() {
             >
                 Shoodies
             </Typography>
-            <Container>
-                {listGoodies.map((goodies) => (
-                    <CardGoody key={(goodies.image, goodies.name)} image={goodies.image} name={goodies.name} />
-                ))}
-            </Container>
+
+            {listGoodies.map((goody) => (
+                <CardGoody key={(goody.image, goody.name)} image={goody.image} name={goody.name} />
+            ))}
         </>
     );
 }

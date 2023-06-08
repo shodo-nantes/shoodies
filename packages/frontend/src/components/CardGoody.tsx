@@ -6,23 +6,20 @@ import Typography from '@mui/material/Typography';
 import { Goody } from 'types/goody';
 
 export default function CardGoody(props: Goody) {
-    const { image } = props;
-    const { name } = props;
+    const { image, name } = props;
+
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
-                id="image"
                 sx={{
                     maxWidth: 345,
                 }}
-                component={'img'}
+                component="img"
                 image={image}
             />
             <CardContent>
                 <Typography
-                    gutterBottom
-                    component="h5"
-                    id="name"
+                    variant="h5"
                     sx={{
                         textAlign: 'center',
                     }}
