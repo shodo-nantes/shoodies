@@ -1,3 +1,4 @@
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import CardGoody from 'components/CardGoody';
@@ -6,33 +7,58 @@ import { Goody } from 'types/goody';
 export default function Home() {
     const listGoodies: Goody[] = [
         {
-            image: 'https://images.unsplash.com/photo-1685900337313-64cd27f0238e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80',
-            name: 'fleur',
+            image: '/public/casquette-bleu-1.jpeg',
+            name: 'Adrien avec casquette',
         },
         {
-            image: 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/7/4/3/743f5af537_50017360_meduse-dags1974-flickr-03.jpg',
-            name: 'méduses',
+            image: '/public/casquette-noir.jpg',
+            name: 'Casquette Noire',
+        },
+
+        {
+            image: 'gourde.jpg',
+            name: 'Gourde',
         },
         {
-            image: 'http://angelloretta1974.a.n.pic.centerblog.net/o/9f7f0359.jpg',
-            name: 'papillon',
+            image: '/public/mug.jpg',
+            name: 'Mug',
+        },
+        {
+            image: '/public/sac-a-dos.jpg',
+            name: 'Sac à dos',
+        },
+        {
+            image: '/public/sweatshirt-front.jpg',
+            name: 'Sweatshirt',
+        },
+        {
+            image: '/public/t-shirt-rouge-front.jpg',
+            name: 'T-Shirt Rouge',
+        },
+        {
+            image: '/public/t-shirt-noir-front.jpg',
+            name: 'T-Shirt Noir',
         },
     ];
 
     return (
         <>
             <Typography
-                variant="h1"
+                variant="h2"
                 sx={{
                     textAlign: 'center',
+                    margin: 10,
                 }}
             >
-                Shoodies
+                Pick your Shoodies
             </Typography>
-
-            {listGoodies.map((goody) => (
-                <CardGoody key={(goody.image, goody.name)} image={goody.image} name={goody.name} />
-            ))}
+            <Grid container spacing={10}>
+                {listGoodies.map((goody) => (
+                    <Grid item xs={12} sm={6} md={4}>
+                        <CardGoody key={(goody.image, goody.name)} image={goody.image} name={goody.name} />
+                    </Grid>
+                ))}
+            </Grid>
         </>
     );
 }

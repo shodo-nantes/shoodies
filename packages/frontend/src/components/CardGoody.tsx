@@ -9,7 +9,7 @@ export default function CardGoody(props: Goody) {
     const { image, name } = props;
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 }} elevation={3}>
             <CardMedia
                 sx={{
                     maxWidth: 345,
