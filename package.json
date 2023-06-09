@@ -26,7 +26,11 @@
         "eslint-plugin-unicorn": "^46.0.0",
         "husky": "^8.0.3",
         "prettier": "^2.8.7",
+        "supertest": "^6.3.3",
         "typescript": "4.9.x"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "@types/supertest": "^2.0.12"
+    }
 }
