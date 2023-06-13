@@ -26,7 +26,9 @@ jobs:
       - name: Create Docker Image Backend
         uses: aevea/action-kaniko@v0.10.0
         with:
-          image: '${{ secrets.DOCKER_IMAGE }}'
+          image: ${{ secrets.DOCKER_IMAGE }}
           path: packages/backend
+          username: ${{ env.username }}
+          password: ${{ env.password }}
           cache: true
-          cache_registry: '${{ secrets.DOCKER_REGISTRY }}'
+          cache_registry: ${{ secrets.DOCKER_REGISTRY }}
