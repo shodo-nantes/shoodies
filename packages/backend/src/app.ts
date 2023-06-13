@@ -1,7 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 
 import { getGoodies } from 'repositories/GoodiesRepository';
-
 const app: Express = express();
 
 app.use(express.json());
