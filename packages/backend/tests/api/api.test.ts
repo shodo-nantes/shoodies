@@ -11,7 +11,8 @@ describe('Api', () => {
 
     it('should return a list of goodies', async () => {
         const result = await request(app).get('/api/goodies').expect(200);
-        const expected = [
+
+        expect(result.body).toEqual([
             {
                 name: 'Mug',
                 image: 'https://placehold.co/600x400',
@@ -32,7 +33,6 @@ describe('Api', () => {
                 name: 'Casquette',
                 image: 'https://placehold.co/550x350',
             },
-        ];
-        expect(result.body).toEqual(expected);
+        ]);
     });
 });
