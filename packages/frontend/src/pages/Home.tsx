@@ -10,7 +10,8 @@ export default function Home() {
     const [goodies, setGoodies] = useState<Goody[]>([]);
 
     const fetchGoodies = async () => {
-        const goodiesFetched = await getGoodies();
+        const goodiesFetched: Goody[] = await getGoodies();
+
         setGoodies(goodiesFetched);
     };
 
@@ -29,6 +30,7 @@ export default function Home() {
             >
                 Pick your Shoodies
             </Typography>
+
             <Grid container spacing={10}>
                 {goodies.map((goody) => (
                     <Grid item xs={12} sm={6} md={4}>
