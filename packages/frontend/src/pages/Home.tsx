@@ -1,45 +1,23 @@
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { useEffect, useState } from 'react';
 
+import { getGoodies } from 'api/GoodiesApi';
 import CardGoody from 'components/CardGoody';
 import { Goody } from 'types/goody';
 
 export default function Home() {
-    const listGoodies: Goody[] = [
-        {
-            image: '/public/casquette-bleu-1.jpeg',
-            name: 'Adrien avec casquette',
-        },
-        {
-            image: '/public/casquette-noir.jpg',
-            name: 'Casquette Noire',
-        },
+    const [goodies, setGoodies] = useState<Goody[]>([]);
 
-        {
-            image: 'gourde.jpg',
-            name: 'Gourde',
-        },
-        {
-            image: '/public/mug.jpg',
-            name: 'Mug',
-        },
-        {
-            image: '/public/sac-a-dos.jpg',
-            name: 'Sac à dos',
-        },
-        {
-            image: '/public/sweatshirt-front.jpg',
-            name: 'Sweatshirt',
-        },
-        {
-            image: '/public/t-shirt-rouge-front.jpg',
-            name: 'T-Shirt Rouge',
-        },
-        {
-            image: '/public/t-shirt-noir-front.jpg',
-            name: 'T-Shirt Noir',
-        },
-    ];
+    const fetchGoodies = async () => {
+        const goodiesFetched: Goody[] = await getGoodies();
+
+        setGoodies(goodiesFetched);
+    };
+
+    useEffect(() => {
+        fetchGoodies();
+    }, []);
 
     return (
         <>
@@ -52,9 +30,10 @@ export default function Home() {
             >
                 Pick your Shoodies
             </Typography>
+
             <Grid container spacing={10}>
-                {listGoodies.map((goody) => (
-                    <Grid item xs={12} sm={6} md={4}>
+                {goodies.map((goody) => (
+                    <Grid item xs={12} sm={6} md={4} key={goody.name}>
                         <CardGoody key={(goody.image, goody.name)} image={goody.image} name={goody.name} />
                     </Grid>
                 ))}
