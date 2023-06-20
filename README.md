@@ -12,6 +12,7 @@ If you need to install node and npm, you can use [nvm](https://github.com/nvm-sh
 
 -   Node.js >= 18.14
 -   Npm >= 9.5
+-   Docker
 
 ## Installation
 
@@ -35,6 +36,33 @@ To start the frontend in development mode, run the following command:
 npm run dev -w frontend
 ```
 
+**Backend:**
+To start the backend in development mode, run the following command:
+
+```bash
+npm run dev -w backend
+```
+
+You have to run this script to update Docker:
+
+```bash
+npm run docker:update -w backend
+```
+
+To acces to the database's data you have to install Prisma. Follow the steps in the prisma's [website](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-typescript-postgresql). Then install the prisma client, run the following command:
+
+```bash
+npm install @prisma/client
+```
+
+Finally run the following script :
+
+```bash
+npm run db:generate -w backend
+```
+
+_Note:Be careful, Docker must be running if you want to acces to your database._
+
 ## Tools
 
 ### Linting
@@ -52,3 +80,17 @@ _Note: Eslint will help you sort your imports automatically. It has been configu
 ### Formatting
 
 Prettier is used to format the code. You can install the prettier extension for your IDE to format the code on save.
+
+### Testing
+
+Jest is used to test the code.To install Jest, run the following command:
+
+```bash
+npm install --save-dev jest
+```
+
+Supertest is a Jest library to test api's https requests.To install Supertest, run the following command:
+
+```bash
+npm install supertest --save-dev
+```
