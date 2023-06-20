@@ -1,13 +1,18 @@
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 import { Goody } from 'types/goody';
+import { getGoodyRoute } from 'utils/routes';
 
-export default function CardGoody(props: Goody) {
-    const { image, name } = props;
+interface CardGoodyProps {
+    goody: Goody;
+}
 
+export default function CardGoody({ goody }: CardGoodyProps) {
     return (
         <Card sx={{ maxWidth: 345 }} elevation={3}>
             <CardMedia
@@ -15,7 +20,7 @@ export default function CardGoody(props: Goody) {
                     maxWidth: 345,
                 }}
                 component="img"
-                image={image}
+                image={goody.image}
             />
             <CardContent>
                 <Typography
@@ -24,9 +29,14 @@ export default function CardGoody(props: Goody) {
                         textAlign: 'center',
                     }}
                 >
-                    {name}
+                    {goody.name}
                 </Typography>
             </CardContent>
+            <CardActions>
+                <Button href={getGoodyRoute(goody.id)} size="small">
+                    Details
+                </Button>
+            </CardActions>
         </Card>
     );
 }
