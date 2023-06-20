@@ -23,14 +23,12 @@ export default function Home() {
         <>
             <Typography
                 variant="h2"
-                component="h1"
                 sx={{
                     textAlign: 'center',
                     margin: 10,
-                    fontFamily: 'Bluu Next',
                 }}
             >
-                Pick Your Shoodies
+                Pick your Shoodies
             </Typography>
 
             <Grid container spacing={10}>

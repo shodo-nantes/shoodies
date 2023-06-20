@@ -1,17 +1,19 @@
 import AppBar from '@mui/material/AppBar';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
 export default function AppBarComponent() {
     return (
-        <AppBar component="header" role="banner" position="static" color="primary">
+        <AppBar component="header" role="banner" position="static">
             <Toolbar>
-                <Container sx={{ display: 'flex', justifyContent: 'center', p: 1 }}>
-                    <Link component="a" href="/" sx={{ justifyContent: 'center' }}>
-                        <img alt="shodo nantes logo" src="logo_nantes.png" width="60rem" />
-                    </Link>
-                </Container>
+                <Typography
+                    variant="h6"
+                    component="a"
+                    href="/"
+                    sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}
+                >
+                    Shoodies
+                </Typography>
             </Toolbar>
         </AppBar>
     );
