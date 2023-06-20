@@ -11,6 +11,7 @@ export default function CardGoody(props: Goody) {
     return (
         <Card sx={{ maxWidth: 345 }} elevation={3}>
             <CardMedia
+                referrerPolicy="no-referrer"
                 sx={{
                     maxWidth: 345,
                 }}
