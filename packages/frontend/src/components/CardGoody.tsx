@@ -9,9 +9,8 @@ export default function CardGoody(props: Goody) {
     const { image, name } = props;
 
     return (
-        <Card sx={{ maxWidth: 300, m: 'auto' }} elevation={0}>
+        <Card sx={{ maxWidth: 345 }} elevation={3}>
             <CardMedia
-                referrerPolicy="no-referrer"
                 sx={{
                     maxWidth: 345,
                 }}
@@ -20,12 +19,9 @@ export default function CardGoody(props: Goody) {
             />
             <CardContent>
                 <Typography
-                    variant="h2"
+                    variant="h5"
                     sx={{
                         textAlign: 'center',
-                        fontSize: 23,
-                        fontWeight: 400,
-                        fontFamily: 'Roboto Mono Variable',
                     }}
                 >
                     {name}
