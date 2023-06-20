@@ -4,6 +4,7 @@
     "version": "0.0.1",
     "scripts": {
         "db:generate": "npx prisma generate",
+        "docker:update": "docker compose up -d",
         "dev": "nodemon",
         "test": "jest"
     },
