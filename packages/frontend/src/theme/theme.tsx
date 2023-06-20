@@ -1,8 +1,8 @@
+import { grey } from '@mui/material/colors';
 import { LinkProps } from '@mui/material/Link';
 import { createTheme } from '@mui/material/styles';
 import * as React from 'react';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
-
 const LinkBehavior = React.forwardRef<HTMLAnchorElement, Omit<RouterLinkProps, 'to'> & { href: RouterLinkProps['to'] }>(
     (props, reference) => {
         const { href, ...other } = props;
@@ -12,6 +12,11 @@ const LinkBehavior = React.forwardRef<HTMLAnchorElement, Omit<RouterLinkProps, '
 );
 
 const theme = createTheme({
+    palette: {
+        primary: {
+            main: grey[900],
+        },
+    },
     components: {
         MuiLink: {
             defaultProps: {
