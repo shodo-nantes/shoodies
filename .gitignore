@@ -36,6 +36,3 @@ dist
 
 # ignore yarn.lock
 yarn.lock
-
-# Database's migration files
-prisma/migrations
