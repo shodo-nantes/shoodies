@@ -5,5 +5,7 @@ import { Goody } from 'types/goody';
 const prisma = new PrismaClient();
 
 export async function getGoodies(): Promise<Goody[]> {
-    return await prisma.shoodies.findMany();
+    return await prisma.shoodies.findMany({
+        orderBy: [{ name: 'asc' }],
+    });
 }

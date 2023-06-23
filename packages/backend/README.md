@@ -1,4 +1,4 @@
-# ![image](/packages/frontend/public/favicon.png) Shoodies  BACKEND
+# ![image](/packages/frontend/public/favicon.png) Shoodies BACKEND
 
 Backend for Shoodies app
 
@@ -25,14 +25,22 @@ You have to run this script to update [Docker](https://docs.docker.com/):
 ```bash
 npm run docker:update -w backend
 ```
+
 We use [Prisma](https://www.prisma.io/docs) as an ORM, to generate the database run the following command :
 
 ```bash
 npm run db:generate -w backend
 ```
 
-_Note : Be careful, Docker must be running if you want to acces your database._
+In order to retreive the database's tables, run the following command :
 
+```bash
+npm run db:migrate-dev -w backend
+```
+
+You'll get the right database but you won't have data inside.
+
+_Note : Be careful, Docker must be running if you want to acces your database._
 
 ## Testing
 
@@ -48,12 +56,11 @@ npm run test
 
 You can configure the backend by creating a `.env` file in the root of the backend package.
 
-
 ### Environment variables
 
 You have to define the following environment variables in the `.env` file:
 
-| Name         | Description                                                              | Default value |
+| Name         | Description                                                                                                                            | Default value |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | PORT         | Port to run the server on (optional)                                                                                                   | 3000          |
 | DB_HOST      | Host of the database (used by docker-compose.yml)                                                                                      |               |

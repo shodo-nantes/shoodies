@@ -8,7 +8,8 @@ datasource db {
 }
 
 model shoodies {
-  id    Int    @id @default(autoincrement())
-  name  String @db.VarChar
-  image String @db.VarChar
+  id          Int    @id @default(autoincrement())
+  name        String @db.VarChar
+  image       String @db.VarChar
+  description String @db.VarChar
 }
