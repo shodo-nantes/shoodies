@@ -1,33 +1,28 @@
 import app from 'app';
 import supertest from 'supertest';
 
+import { getGoodies } from 'repositories/GoodiesRepository';
+
 const request = supertest;
 
+jest.mock('repositories/GoodiesRepository', () => ({
+    ...jest.requireActual('repositories/GoodiesRepository'),
+    getGoodies: jest.fn().mockReturnValue(
+        Promise.resolve([
+            { name: 'Casquette bleu', image: 'http://my-image.com/casquette-bleu.jpg' },
+            { name: 'Casquette noir', image: 'http://my-image.com/casquette-noir.jpg' },
+        ]),
+    ),
+}));
 describe('Api', () => {
-    it('should return a list of goodies', async () => {
-        const result = await request(app).get('/api/goodies').expect(200);
-
-        expect(result.body).toEqual([
-            {
-                name: 'Mug',
-                image: 'https://placehold.co/600x400',
-            },
-            {
-                name: 'T-Shirt',
-                image: 'https://placehold.co/500x400',
-            },
-            {
-                name: 'Sticker',
-                image: 'https://placehold.co/600x300',
-            },
-            {
-                name: 'Hoodie',
-                image: 'https://placehold.co/450x200',
-            },
-            {
-                name: 'Casquette',
-                image: 'https://placehold.co/550x350',
-            },
+    it('should return an array of goodies', async () => {
+        const result = await request(app).get('/api/goodies');
+        expect(result.statusCode).toBe(200);
+        expect(result.body.length).toBe(2);
+        expect(getGoodies).toHaveBeenCalled();
+        expect(result.body).toMatchObject([
+            { name: 'Casquette bleu', image: 'http://my-image.com/casquette-bleu.jpg' },
+            { name: 'Casquette noir', image: 'http://my-image.com/casquette-noir.jpg' },
         ]);
     });
 });

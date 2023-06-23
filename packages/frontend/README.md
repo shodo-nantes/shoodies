@@ -1,6 +1,6 @@
-# Shoodies frontend
+# ![image](/packages/frontend/public/favicon.png) Shoodies FRONTEND
 
-Frontend for shoodies app
+Frontend for Shoodies app
 
 ## Installation
 

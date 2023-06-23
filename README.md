@@ -1,4 +1,5 @@
-# shoodies
+# ![image](/packages/frontend/public/favicon.png) Shoodies             
+
 
 Application to help shodoers to choose their goodies
 
@@ -12,6 +13,7 @@ If you need to install node and npm, you can use [nvm](https://github.com/nvm-sh
 
 -   Node.js >= 18.14
 -   Npm >= 9.5
+-   Docker
 
 ## Installation
 
@@ -29,10 +31,20 @@ _Note: you don't have to install dependencies for each package, the root package
 
 **Frontend:**
 
-To start the frontend in development mode, run the following command:
++ To start the frontend in development mode, run the following command:
 
 ```bash
 npm run dev -w frontend
+```
+
+**Backend:**
+
+Before starting the backend, be sure to read the backend [configuration](packages/backend/README.md#configuration).
+
++ To start the backend in development mode, run the following command:
+
+```bash
+npm run dev -w backend
 ```
 
 ## Tools
@@ -52,3 +64,4 @@ _Note: Eslint will help you sort your imports automatically. It has been configu
 ### Formatting
 
 Prettier is used to format the code. You can install the prettier extension for your IDE to format the code on save.
+
