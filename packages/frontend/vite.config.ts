@@ -5,7 +5,9 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig(({ mode }) => {
     let { API_URL } = loadEnv(mode, process.cwd(), '');
 
-    if (!API_URL) {
+    if (API_URL) {
+        console.info(`API URL value.: ${API_URL}`);
+    } else {
         API_URL = 'http://localhost:3000';
         console.info(`API_URL is not defined in .env file. Using default value.: ${API_URL}`);
     }
