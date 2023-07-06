@@ -25,6 +25,9 @@ jobs:
       - name: Build backend
         run: npm run build -w backend
 
+      - name: Build frontend
+        run: npm run production -w frontend
+
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v1'
@@ -43,7 +46,12 @@ jobs:
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
 
-      - name: 'Build and push container 2'
+      - name: 'Build and push BACK'
         run: |-
-          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{env.APP}}/${{env.APP}}:${{ github.sha }}" ./packages/backend
-          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{env.APP}}/${{env.APP}}:${{ github.sha }}"
+          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{env.APP}}/${{env.APP}}-back:${{ github.sha }}" ./packages/backend
+          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{env.APP}}/${{env.APP}}-back:${{ github.sha }}"
+
+      - name: 'Build and push FRONT'
+        run: |-
+          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{env.APP}}/${{env.APP}}-front:${{ github.sha }}" ./packages/frontend
+          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{env.APP}}/${{env.APP}}-front:${{ github.sha }}"
