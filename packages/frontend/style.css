@@ -1,8 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-
 
 #overlay {
     position: fixed;
@@ -31,7 +31,7 @@
 }
 
 header {
-    background-color: black;
+    background-color: rgb(12, 12, 12);;
     width: 100%;
     height: 20vh; 
     display: flex;
@@ -42,13 +42,25 @@ header {
 
 .headerLogo {
     height: 18vh;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 30px;
+    margin-left: 25px;
     margin-right: 15px;
 }
 
 .headerText {
     color: white;
+}
+
+.connection {
+    width: 81%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.connection img{
+    margin-right: 25px;
+    width: 3vh;
+    background-color: white;
 }
 
 main {
@@ -117,6 +129,59 @@ footer {
 .footerLogo {
     height: 8vh;
     margin-right: 10px;
+}
+
+section {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section h1 {
+    margin-bottom: 30px;
+    width: 100%;
+    color: rgb(12, 12, 12);;
+}
+
+.tshirtCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.tshirtFront{
+    margin: 1px;
+    height: 50vh;
+    width: auto;
+    border-radius: 4px;
+}
+
+.tshirtBack {
+    margin: 1px;
+    height: 50vh;
+    width: auto;
+    border-radius: 4px;
+}
+
+.cardText {
+    margin: 3px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.4);
+    border-radius: 5px;
+    height: 50vh;
+    width: 39vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.cardTshirtPage h2 {
+    margin-top: 20px;
+    color: rgb(12, 12, 12);;
 }
 
 @keyframes fadeOut {
