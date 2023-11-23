@@ -18,25 +18,3 @@ CREATE TABLE IF NOT EXISTS goodie_size_association (
     FOREIGN KEY (id_size) REFERENCES size(id),
     UNIQUE (id_goodie, id_size)
 );
-
-INSERT INTO size (label) 
-VALUES
-    ('xs'),
-    ('s'),
-    ('m'),
-    ('l'),
-    ('xl'),
-    ('xxl'),
-    ('unique'),
-    ('36'),
-    ('37'),
-    ('38'),
-    ('40'),
-    ('41'),
-    ('42'),
-    ('43'),
-    ('44'),
-    ('45'),
-    ('35 - 37'),
-    ('38 - 42'),
-    ('43 - 46');
