@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname.includes("index.html")) {
-    setTimeout(function () {
-      var overlay = document.getElementById("overlay");
-      overlay.parentNode.removeChild(overlay);
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname.includes('index.html')) {
+        setTimeout(function () {
+            const overlay = document.querySelector('overlay');
+            overlay.childNode.remove(overlay);
 
-      document.querySelector("main").style.opacity = 1;
-    }, 2000);
-  }
+            document.querySelector('main').style.opacity = 1;
+        }, 2000);
+    }
 });
