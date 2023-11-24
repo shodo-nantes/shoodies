@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Article from './components/Article';
-import CardList from './components/CardList';
+import ProductDetail from './components/ProductDetail';
+import ProductList from './components/ProductList';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -13,8 +13,8 @@ function App() {
 
             <main>
                 <Routes>
-                    <Route path="/" element={<CardList />} />
-                    <Route path="/article/:id" element={<Article />} />
+                    <Route path="/" element={<ProductList />} />
+                    <Route path="/product/:id" element={<ProductDetail />} />
                 </Routes>
             </main>
 
