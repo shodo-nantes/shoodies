@@ -1,8 +1,12 @@
 import Card from './Card';
 import { getProducts } from '../service/productService';
+import { useEffect, useState } from 'react';
 
 function ProductList() {
-    const cards = getProducts();
+    const [cards, setCards] = useState([]);
+    useEffect(() => {
+        setCards(getProducts());
+    }, []);
     return (
         <>
             {cards.map((card) => (

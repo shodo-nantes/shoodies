@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({ card: { title, frontPhoto, backPhoto, id } }) {
+function Card({ card: { title, frontPhoto, id } }) {
     return (
         <div className="cardContainer">
             <div className="card">
