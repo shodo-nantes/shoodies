@@ -1,9 +1,17 @@
-const request = require('supertest');
+import request from 'supertest';
 
-const app = require('../index.js');
+import app from '../index';
+
+let server;
+
+beforeEach((done) => {
+    server = app.listen(4400, done);
+});
+
+afterAll((done) => {
+    server.close(done);
+});
 
 test('First test', async () => {
-    const server = app.listen(4400);
-    request('http://localhost:4400').get('/').expect(200);
-    server.close();
+    await request('http://localhost:4400').get('/').expect(200);
 });
