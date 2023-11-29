@@ -38,7 +38,7 @@ app.get('/products/:id', (request, response) => {
     if (product) {
         response.json(product);
     } else {
-        response.status(404);
+        response.sendStatus(404);
     }
 });
 
