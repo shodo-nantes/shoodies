@@ -3,13 +3,16 @@ import { getProducts } from '../service/productService';
 import { useEffect, useState } from 'react';
 
 function ProductList() {
-    const [cards, setCards] = useState([]);
+    const [products, setProducts] = useState([]);
     useEffect(() => {
-        setCards(getProducts());
+        async function fetchData() {
+            setProducts(await getProducts());
+        }
+        fetchData();
     }, []);
     return (
         <>
-            {cards.map((card) => (
+            {products.map((card) => (
                 <div key={card.id}>
                     <Card card={card} />
                 </div>
