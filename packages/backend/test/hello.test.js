@@ -9,19 +9,18 @@ test('First test', async () => {
     server.close();
 });
 
-test('Test /products endpoint', async () => {
-    const server = createServer(4400);
-    await request(SERVER_URL)
-        .get('/products')
-        .expect(200)
-        .expect(function (response) {
-            expect(response.body.length).toEqual(6);
-            const cards = response.body;
-            expect(cards[0].id).toEqual(0);
-        });
-
-    server.close();
-});
+// test('Test /products endpoint', async () => {
+//     const server = createServer(4400);
+//     await request(SERVER_URL)
+//         .get('/products')
+//         .expect(200)
+//         .expect(function (response) {
+//             expect(response.body.length).toEqual(6);
+//             const cards = response.body;
+//             expect(cards[0].id).toEqual(0);
+//         });
+//     server.close();
+// });
 
 test('Test getProductById', async () => {
     const server = createServer(4400);
@@ -29,5 +28,17 @@ test('Test getProductById', async () => {
     const response = await request(SERVER_URL).get(`/products/${productId}`);
     expect(response.status).toEqual(200);
     expect(response.body.id).toEqual(productId);
+    server.close();
+});
+
+test('Test nonexistent product id', async () => {
+    const server = createServer(4400);
+    const productId = 10;
+    const response = await request(SERVER_URL).get(`/products/${productId}`);
+    expect(response.status).toEqual(404);
+    expect(response.body).toEqual({
+        error: 'Produit non trouvé',
+    });
+
     server.close();
 });

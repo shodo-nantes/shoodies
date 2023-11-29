@@ -32,8 +32,14 @@ app.get('/products', (request, response) => {
 });
 
 app.get('/products/:id', (request, response) => {
-    const product = products.find((card) => card.id === Number.parseInt(request.params.id));
-    response.json(product);
+    const productId = Number.parseInt(request.params.id);
+    const product = products.find((p) => p.id === productId);
+
+    if (product) {
+        response.json(product);
+    } else {
+        response.status(404);
+    }
 });
 
 function createServer(port) {

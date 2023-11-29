@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 function ProductDetail() {
     const { id } = useParams();
-    const [product, setProduct] = useState(0);
+    const [product, setProduct] = useState({});
     useEffect(() => {
         async function fetchData() {
             setProduct(await getProductById(id));
@@ -13,6 +13,10 @@ function ProductDetail() {
     }, [id]);
 
     const { title, frontPhoto, backPhoto, description } = product;
+
+    if (Object.keys(product).length === 0) {
+        return <h2>Produit non trouvé</h2>;
+    }
 
     return (
         <section>
