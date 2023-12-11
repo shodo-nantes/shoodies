@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS product_size_association (
 INSERT INTO product (title, model, photo_folder, description) VALUES
     ('T-shirt', 'noir', 'tshirt_noir', 'T-shirt noir avec logo Shodo'),
     ('Sweater', 'noir', 'sweatshirt', 'Sweater noir avec logo Shodo'),
-    ('Casquette', 'noire', 'casquette', 'Casquette noire avec logo Shodo'),
+    ('Casquette', 'noire', 'casquette_noir', 'Casquette noire avec logo Shodo'),
     ('Sac à dos', 'noir', 'sac_a_dos', 'Sac à dos noir avec logo Shodo'),
     ('Mug', 'blanc', 'mug', 'Mug blanc avec logo Shodo et phrase "Only code can judge me"'),
     ('Gourde', 'noire', 'gourde', 'Gourde noire avec logo Shodo');

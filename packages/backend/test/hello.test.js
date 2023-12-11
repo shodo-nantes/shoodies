@@ -17,7 +17,7 @@ test('Test /products endpoint', async () => {
         .expect(function (response) {
             expect(response.body.length).toEqual(6);
             const cards = response.body;
-            expect(cards[0].id).toEqual(0);
+            expect(cards[0].id).toEqual(1);
         });
     server.close();
 });
@@ -36,5 +36,13 @@ test('Test nonexistent product id', async () => {
     const productId = 10;
     const response = await request(SERVER_URL).get(`/products/${productId}`);
     expect(response.status).toEqual(404);
+    server.close();
+});
+
+test('Test nonexistent product id', async () => {
+    const server = createServer(4400);
+    const productId = 'a';
+    const response = await request(SERVER_URL).get(`/products/${productId}`);
+    expect(response.status).toEqual(400);
     server.close();
 });

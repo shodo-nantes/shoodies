@@ -12,7 +12,7 @@ function ProductDetail() {
         fetchData();
     }, [id]);
 
-    const { title, frontPhoto, backPhoto, description } = product;
+    const { title, photoFolder, description } = product;
 
     if (Object.keys(product).length === 0) {
         return <h2>Produit non trouvé</h2>;
@@ -22,8 +22,13 @@ function ProductDetail() {
         <section>
             <h1>{title}</h1>
             <div className="tshirtCard">
-                <img className="photoFront" src={`/images/${frontPhoto}/front.jpg`} alt="" />
-                {backPhoto && <img className="photoBack" src={`/images/${backPhoto}/back.jpg`} alt="" />}
+                <img className="photoFront" src={`/images/${photoFolder}/front.jpg`} alt="" />
+                <img
+                    className="photoBack"
+                    src={`/images/${photoFolder}/back.jpg`}
+                    alt=""
+                    onError={(e) => e.target.remove()}
+                />
 
                 <div className="cardText">
                     <h2>{title}</h2>
